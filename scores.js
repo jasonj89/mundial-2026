@@ -23,7 +23,7 @@ window.SCORE_UPDATES = [
   { date: 23, team1: 'Portugal', team2: 'Uzbekistan', score1: 5, score2: 0 },
   { date: 23, team1: 'Inglaterra', team2: 'Ghana', score1: 0, score2: 0 },
   { date: 23, team1: 'Panama', team2: 'Croacia', score1: 0, score2: 1 },
-  { date: 23, team1: 'Colombia', team2: 'DR Congo', score1: 4, score2: 0 },
+  { date: 23, team1: 'Colombia', team2: 'DR Congo', score1: 1, score2: 0 },
   { date: 24, team1: 'Suiza', team2: 'Canada', score1: 2, score2: 1 },
   { date: 24, team1: 'Bosnia', team2: 'Catar', score1: 3, score2: 1 },
   
