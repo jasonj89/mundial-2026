@@ -16,6 +16,17 @@ window.SCORE_UPDATES = [
   { date: 21, team1: 'España', team2: 'Arabia Saudita', score1: 4, score2: 0 },
 
   // Add new completed matches below this line.
+  { date: 22, team1: 'Argentina', team2: 'Austria', score1: 2, score2: 0 },
+  { date: 22, team1: 'Francia', team2: 'Irak', score1: 3, score2: 0 },
+  { date: 22, team1: 'Noruega', team2: 'Senegal', score1: 3, score2: 2 },
+  { date: 22, team1: 'Jordan', team2: 'Argelia', score1: 1, score2: 2 },
+  { date: 23, team1: 'Portugal', team2: 'Uzbekistan', score1: 5, score2: 0 },
+  { date: 23, team1: 'Inglaterra', team2: 'Ghana', score1: 0, score2: 0 },
+  { date: 23, team1: 'Panama', team2: 'Croacia', score1: 0, score2: 1 },
+  { date: 23, team1: 'Colombia', team2: 'DR Congo', score1: 4, score2: 0 },
+  { date: 24, team1: 'Suiza', team2: 'Canada', score1: 2, score2: 1 },
+  { date: 24, team1: 'Bosnia', team2: 'Catar', score1: 3, score2: 1 },
+  
   // Example:
   // { date: 24, team1: 'Suiza', team2: 'Canadá', score1: 2, score2: 1 },
 ];
