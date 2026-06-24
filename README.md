@@ -1,4 +1,4 @@
-# mundial-2026 index2.html
+# mundial-2026 index.html
 2026 Mundial 
 /* =========================================================
    MANUAL SCORE UPDATES — EDIT THIS SECTION EACH NIGHT
