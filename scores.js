@@ -33,8 +33,6 @@ window.SCORE_UPDATES = [
   { date: 24, team1: 'Escocia', team2: 'Brasil', score1: 0, score2: 3 },
   { date: 24, team1: 'Sudáfrica', team2: 'Corea del Sur', score1: 1, score2: 0 },
   { date: 24, team1: 'Chequia', team2: 'México', score1: 0, score2: 3 },
-  { date: 25, team1: 'Curazao', team2: 'Costa de Marfil', score1: 0, score2: 2 },
-  { date: 25, team1: 'Ecuador', team2: 'Alemania', score1: 2, score2: 1 },
 ];
 
 // Teams that have qualified but whose exact bracket slot is not settled yet.
