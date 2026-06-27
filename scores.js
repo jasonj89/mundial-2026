@@ -39,11 +39,10 @@ window.SCORE_UPDATES = [
   { date: 25, team1: 'Túnez', team2: 'Países Bajos', score1: 1, score2: 3 },
   { date: 25, team1: 'Japón', team2: 'Suecia', score1: 1, score2: 1 },
   { date: 25, team1: 'Turquía', team2: 'EE.UU.', score1: 3, score2: 2 },
-  
-  { date: 26, team1: 'Cabo Verde', team2: 'Arabia Suadita', score1: 0, score2: 0 },
-  { date: 26, team1: 'Uruguay', team2: 'Espana', score1: 0, score2: 1 },
+  { date: 26, team1: 'Cabo Verde', team2: 'Arabia Saudita', score1: 0, score2: 0 },
+  { date: 26, team1: 'Uruguay', team2: 'España', score1: 0, score2: 1 },
   { date: 26, team1: 'Nueva Zelanda', team2: 'Bélgica', score1: 1, score2: 5 },
-  { date: 26, team1: 'Egipto', team2: 'Iran', score1: 1, score2: 5 },
+  { date: 26, team1: 'Egipto', team2: 'Irán', score1: 1, score2: 1 },
 ];
 
 // Teams that have qualified but whose exact bracket slot is not settled yet.
