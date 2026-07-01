@@ -3,9 +3,10 @@
 // Edit ONLY this file for new scores, then commit it to GitHub.
 
 // Optional dashboard fields shown at the top of the site.
-window.CURRENT_MATCHDAY = 'Dieciseisavos de Final';
-window.SCORE_LAST_UPDATED = '30 de junio de 2026';
-window.TODAY_DATE = 30; // June day number for "Partidos de hoy".
+window.CURRENT_MATCHDAY = 'Octavos de Final';
+window.SCORE_LAST_UPDATED = '1 de julio de 2026 · 8:00 PM MDT';
+window.TODAY_DATE = 1; // Day number for legacy group-stage filters.
+window.CURRENT_STAGE_OVERRIDE = 'r16'; // group, r32, r16, qf, sf, final
 
 // You can now use either Spanish team names OR short team codes.
 // Codes are safer because they avoid accent/spelling issues.
@@ -84,4 +85,14 @@ window.KNOCKOUT_SCORE_UPDATES = [
   { round: 'r32', team1: 'NED', team2: 'MAR', score1: 1, score2: 1, pen1: 2, pen2: 3 },
   { round: 'r32', team1: 'CIV', team2: 'NOR', score1: 1, score2: 2 },
   { round: 'r32', team1: 'FRA', team2: 'SWE', score1: 3, score2: 0 },
+  { round: 'r32', team1: 'MEX', team2: 'ECU', score1: 2, score2: 0 },
+];
+
+// Upcoming matches shown in the live tournament dashboard.
+// Use local Mountain Time in the time field for your family.
+window.UPCOMING_MATCHES = [
+  { round: 'r16', team1: 'CAN', team2: 'MAR', date: '2026-07-04', dateLabel: '4 de julio', dateShort: 'Jul 4', time: '11:00 AM MDT', venue: 'Houston' },
+  { round: 'r16', team1: 'PAR', team2: 'FRA', date: '2026-07-04', dateLabel: '4 de julio', dateShort: 'Jul 4', time: '3:00 PM MDT', venue: 'Philadelphia' },
+  { round: 'r16', team1: 'BRA', team2: 'NOR', date: '2026-07-05', dateLabel: '5 de julio', dateShort: 'Jul 5', time: '2:00 PM MDT', venue: 'New York/New Jersey' },
+  { round: 'r16', team1: 'MEX', team2: 'ENG', date: '2026-07-05', dateLabel: '5 de julio', dateShort: 'Jul 5', time: '6:00 PM MDT', venue: '—' },
 ];
