@@ -86,6 +86,8 @@ window.KNOCKOUT_SCORE_UPDATES = [
   { round: 'r32', team1: 'CIV', team2: 'NOR', score1: 1, score2: 2 },
   { round: 'r32', team1: 'FRA', team2: 'SWE', score1: 3, score2: 0 },
   { round: 'r32', team1: 'MEX', team2: 'ECU', score1: 2, score2: 0 },
+  { round: 'r32', team1: 'BEL', team2: 'SEN', score1: 3, score2: 2 },
+  { round: 'r32', team1: 'USA', team2: 'BOS', score1: 2, score2: 0 },
 ];
 
 // Upcoming matches shown in the live tournament dashboard.
