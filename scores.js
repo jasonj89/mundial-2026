@@ -2,6 +2,52 @@
 // Nightly update file for the World Cup tracker.
 // Edit ONLY this file for new scores, then commit it to GitHub.
 
+const TEAM_CODES = {
+
+  ARG: "Argentina",
+  AUS: "Australia",
+  AUT: "Austria",
+  BEL: "Bélgica",
+  BIH: "Bosnia",
+  BRA: "Brasil",
+  CAN: "Canadá",
+  CIV: "Costa de Marfil",
+  COL: "Colombia",
+  CRO: "Croacia",
+  CPV: "Cabo Verde",
+  COD: "Congo",
+  ECU: "Ecuador",
+  EGY: "Egipto",
+  ENG: "Inglaterra",
+  ESP: "España",
+  FRA: "Francia",
+  GER: "Alemania",
+  GHA: "Ghana",
+  IRQ: "Irak",
+  IRN: "Irán",
+  JPN: "Japón",
+  JOR: "Jordania",
+  MAR: "Marruecos",
+  MEX: "México",
+  NED: "Países Bajos",
+  NOR: "Noruega",
+  NZL: "Nueva Zelanda",
+  PAN: "Panamá",
+  PAR: "Paraguay",
+  POR: "Portugal",
+  QAT: "Catar",
+  KOR: "Corea del Sur",
+  KSA: "Arabia Saudita",
+  SCO: "Escocia",
+  SEN: "Senegal",
+  SUI: "Suiza",
+  SWE: "Suecia",
+  TUN: "Túnez",
+  TUR: "Turquía",
+  USA: "EE.UU.",
+  UZB: "Uzbekistán",
+};
+
 // Optional dashboard fields shown at the top of the site.
 window.CURRENT_MATCHDAY = 'Octavos de Final';
 window.SCORE_LAST_UPDATED = '1 de julio de 2026 · 8:00 PM MDT';
@@ -87,7 +133,7 @@ window.KNOCKOUT_SCORE_UPDATES = [
   { round: 'r32', team1: 'FRA', team2: 'SWE', score1: 3, score2: 0 },
   { round: 'r32', team1: 'MEX', team2: 'ECU', score1: 2, score2: 0 },
   { round: 'r32', team1: 'BEL', team2: 'SEN', score1: 3, score2: 2 },
-  { round: 'r32', team1: 'USA', team2: 'BOS', score1: 2, score2: 0 },
+  { round: 'r32', team1: 'USA', team2: 'BIH', score1: 2, score2: 0 },
 ];
 
 // Upcoming matches shown in the live tournament dashboard.
