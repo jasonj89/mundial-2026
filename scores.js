@@ -4,7 +4,7 @@
 
 // Optional dashboard fields shown at the top of the site.
 window.CURRENT_MATCHDAY = 'Octavos de Final';
-window.SCORE_LAST_UPDATED = '1 de julio de 2026 · 8:00 PM MDT';
+window.SCORE_LAST_UPDATED = '6 de julio de 2026 · 8:00 PM MDT';
 window.TODAY_DATE = 1; // Day number for legacy group-stage filters.
 window.CURRENT_STAGE_OVERRIDE = 'r16'; // group, r32, r16, qf, sf, final
 
@@ -79,22 +79,36 @@ window.CLINCHED_SLOTS = {};
 // Preferred format: use team codes. score1/score2 = match goals, pen1/pen2 = penalty shootout goals.
 // Penalty fields are only needed when the match score is tied after play.
 window.KNOCKOUT_SCORE_UPDATES = [
+  // Round of 32
   { round: 'r32', team1: 'RSA', team2: 'CAN', score1: 0, score2: 1 },
-  { round: 'r32', team1: 'BRA', team2: 'JPN', score1: 2, score2: 1 },
   { round: 'r32', team1: 'GER', team2: 'PAR', score1: 1, score2: 1, pen1: 3, pen2: 4 },
   { round: 'r32', team1: 'NED', team2: 'MAR', score1: 1, score2: 1, pen1: 2, pen2: 3 },
-  { round: 'r32', team1: 'CIV', team2: 'NOR', score1: 1, score2: 2 },
+  { round: 'r32', team1: 'BRA', team2: 'JPN', score1: 2, score2: 1 },
   { round: 'r32', team1: 'FRA', team2: 'SWE', score1: 3, score2: 0 },
+  { round: 'r32', team1: 'CIV', team2: 'NOR', score1: 1, score2: 2 },
   { round: 'r32', team1: 'MEX', team2: 'ECU', score1: 2, score2: 0 },
-  { round: 'r32', team1: 'BEL', team2: 'SEN', score1: 3, score2: 2 },
+  { round: 'r32', team1: 'ENG', team2: 'COD', score1: 2, score2: 1 },
   { round: 'r32', team1: 'USA', team2: 'BIH', score1: 2, score2: 0 },
+  { round: 'r32', team1: 'BEL', team2: 'SEN', score1: 3, score2: 2 },
+  { round: 'r32', team1: 'POR', team2: 'CRO', score1: 2, score2: 1 },
+  { round: 'r32', team1: 'ESP', team2: 'AUT', score1: 3, score2: 0 },
+  { round: 'r32', team1: 'SUI', team2: 'DZA', score1: 2, score2: 0 },
+  { round: 'r32', team1: 'ARG', team2: 'CPV', score1: 3, score2: 2 },
+  { round: 'r32', team1: 'COL', team2: 'GHA', score1: 1, score2: 0 },
+  { round: 'r32', team1: 'AUS', team2: 'EGY', score1: 1, score2: 1, pen1: 2, pen2: 4 },
+
+  // Round of 16
+  { round: 'r16', team1: 'CAN', team2: 'MAR', score1: 0, score2: 3 },
+  { round: 'r16', team1: 'PAR', team2: 'FRA', score1: 0, score2: 1 },
+  { round: 'r16', team1: 'BRA', team2: 'NOR', score1: 1, score2: 2 },
+  { round: 'r16', team1: 'MEX', team2: 'ENG', score1: 2, score2: 3 },
+  { round: 'r16', team1: 'POR', team2: 'ESP', score1: 0, score2: 1 },
 ];
 
 // Upcoming matches shown in the live tournament dashboard.
 // Use local Mountain Time in the time field for your family.
 window.UPCOMING_MATCHES = [
-  { round: 'r16', team1: 'CAN', team2: 'MAR', date: '2026-07-04', dateLabel: '4 de julio', dateShort: 'Jul 4', time: '11:00 AM MDT', venue: 'Houston' },
-  { round: 'r16', team1: 'PAR', team2: 'FRA', date: '2026-07-04', dateLabel: '4 de julio', dateShort: 'Jul 4', time: '3:00 PM MDT', venue: 'Philadelphia' },
-  { round: 'r16', team1: 'BRA', team2: 'NOR', date: '2026-07-05', dateLabel: '5 de julio', dateShort: 'Jul 5', time: '2:00 PM MDT', venue: 'New York/New Jersey' },
-  { round: 'r16', team1: 'MEX', team2: 'ENG', date: '2026-07-05', dateLabel: '5 de julio', dateShort: 'Jul 5', time: '6:00 PM MDT', venue: '—' },
+  { round: 'r16', team1: 'USA', team2: 'BEL', date: '2026-07-06', dateLabel: '6 de julio', dateShort: 'Jul 6', time: '6:00 PM MDT', venue: '—' },
+  { round: 'r16', team1: 'ARG', team2: 'EGY', date: '2026-07-07', dateLabel: '7 de julio', dateShort: 'Jul 7', time: '10:00 AM MDT', venue: '—' },
+  { round: 'r16', team1: 'SUI', team2: 'COL', date: '2026-07-07', dateLabel: '7 de julio', dateShort: 'Jul 7', time: '2:00 PM MDT', venue: '—' },
 ];
