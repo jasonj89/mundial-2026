@@ -141,6 +141,20 @@ h2{font-size:.95rem!important}h2 .text-xs{display:none}
 [data-tip]:hover::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;background:#020617;color:#e2e8f0;border:1px solid rgba(148,163,184,.28);padding:5px 8px;border-radius:7px;font-size:11px;font-weight:500;z-index:9999;box-shadow:0 10px 25px rgba(0,0,0,.35)}
 [data-tip]:hover::before{content:"";position:absolute;left:50%;bottom:calc(100% + 3px);transform:translateX(-50%);border-width:5px 5px 0 5px;border-style:solid;border-color:rgba(148,163,184,.28) transparent transparent transparent;z-index:9999}
 
+/* Juli family-pool champion Easter egg */
+.hero-title-easter{cursor:pointer;display:inline-block;transition:transform .18s ease,text-shadow .18s ease,color .18s ease;user-select:none}
+.hero-title-easter:hover{transform:translateY(-1px);text-shadow:0 0 18px rgba(251,191,36,.28)}
+.hero-title-easter:focus-visible{outline:2px solid #fbbf24;outline-offset:5px;border-radius:6px}
+.juli-modal{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(2,6,23,.88);backdrop-filter:blur(8px);animation:juliFade .2s ease}
+.juli-modal.open{display:flex}
+.juli-modal-card{position:relative;width:min(1100px,96vw);max-height:92vh;animation:juliPop .28s cubic-bezier(.2,.8,.2,1)}
+.juli-modal-image{display:block;width:100%;max-height:88vh;object-fit:contain;border-radius:16px;border:2px solid rgba(251,191,36,.72);box-shadow:0 0 0 1px rgba(255,255,255,.08),0 24px 80px rgba(0,0,0,.65),0 0 48px rgba(251,191,36,.18)}
+.juli-modal-close{position:absolute;top:-14px;right:-14px;width:38px;height:38px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#020617;color:#f8fafc;border:1px solid rgba(251,191,36,.55);box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;font-size:18px;transition:transform .15s ease,background .15s ease}
+.juli-modal-close:hover{transform:scale(1.06);background:#111827}
+@keyframes juliFade{from{opacity:0}to{opacity:1}}
+@keyframes juliPop{from{opacity:0;transform:scale(.96) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@media(max-width:640px){.juli-modal{padding:10px}.juli-modal-card{width:98vw}.juli-modal-close{top:6px;right:6px;width:34px;height:34px;background:rgba(2,6,23,.9)}}
+
 </style>
 </head>
 <body>
@@ -154,7 +168,7 @@ h2{font-size:.95rem!important}h2 .text-xs{display:none}
         <div class="flex items-center gap-3 mb-2">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.28)"><i class="fas fa-futbol text-emerald-400 text-xl"></i></div>
           <div>
-            <h1 class="hero-title text-3xl md:text-4xl text-white">Mundial 2026</h1>
+            <h1 id="juli-easter-title" class="hero-title hero-title-easter text-3xl md:text-4xl text-white" role="button" tabindex="0" aria-label="Mundial 2026">Mundial 2026</h1>
             <p class="text-sm text-slate-400" data-i18n="subtitle" data-tip-en="Group stage, standings, and knockout stage" data-tip-es="Fase de grupos, posiciones y fase eliminatoria">Fase de grupos, posiciones y fase eliminatoria</p>
           </div>
         </div>
@@ -164,6 +178,14 @@ h2{font-size:.95rem!important}h2 .text-xs{display:none}
     </div>
   </div>
 </header>
+
+<!-- Hidden family-pool champion Easter egg -->
+<div id="juli-champion-modal" class="juli-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Felicitaciones a Juli">
+  <div class="juli-modal-card" role="document">
+    <button id="juli-modal-close" class="juli-modal-close" type="button" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+    <img class="juli-modal-image" src="juli-champion.png" alt="¡Felicitaciones, Juli! ¡Campeona de la Polla Mundial 2026!">
+  </div>
+</div>
 
 <section class="grid grid-cols-1 xl:grid-cols-4 gap-3 mb-5">
   <div class="mini-panel xl:col-span-1">
@@ -752,6 +774,34 @@ function exportCSV(){
 }
 function showToast(msg){const t=document.createElement('div');t.textContent=msg;t.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#1e293b;color:#e2e8f0;padding:10px 20px;border-radius:10px;font-size:13px;font-weight:500;z-index:9999;border:1px solid #334155;box-shadow:0 8px 30px rgba(0,0,0,.4);opacity:0;transition:all .3s ease';document.body.appendChild(t);requestAnimationFrame(()=>{t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';});setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)';setTimeout(()=>t.remove(),300);},2000);}
 function render(){renderStats();renderFilters();renderTable();renderStandings();renderBracket();renderDashboard();renderScoreWarnings();applyLanguage();}
+
+// Family-pool champion Easter egg: click the site title to celebrate Juli.
+(function setupJuliEasterEgg(){
+  const title=document.getElementById('juli-easter-title');
+  const modal=document.getElementById('juli-champion-modal');
+  const closeBtn=document.getElementById('juli-modal-close');
+  if(!title||!modal||!closeBtn)return;
+  let lastFocused=null;
+  function openJuliModal(){
+    lastFocused=document.activeElement;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    closeBtn.focus();
+  }
+  function closeJuliModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastFocused&&typeof lastFocused.focus==='function')lastFocused.focus();
+  }
+  title.addEventListener('click',openJuliModal);
+  title.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openJuliModal();}});
+  closeBtn.addEventListener('click',closeJuliModal);
+  modal.addEventListener('click',e=>{if(e.target===modal)closeJuliModal();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeJuliModal();});
+})();
+
 applyExternalScores();
 applyLanguage();
 render();

@@ -3,10 +3,10 @@
 // Edit ONLY this file for new scores, then commit it to GitHub.
 
 // Optional dashboard fields shown at the top of the site.
-window.CURRENT_MATCHDAY = 'Octavos de Final';
-window.SCORE_LAST_UPDATED = '6 de julio de 2026 · 8:00 PM MDT';
+window.CURRENT_MATCHDAY = 'Final · España Campeón';
+window.SCORE_LAST_UPDATED = '19 de julio de 2026 · Final';
 window.TODAY_DATE = 1; // Day number for legacy group-stage filters.
-window.CURRENT_STAGE_OVERRIDE = 'r16'; // group, r32, r16, qf, sf, final
+window.CURRENT_STAGE_OVERRIDE = 'final'; // group, r32, r16, qf, sf, final
 
 // You can now use either Spanish team names OR short team codes.
 // Codes are safer because they avoid accent/spelling issues.
@@ -98,17 +98,32 @@ window.KNOCKOUT_SCORE_UPDATES = [
   { round: 'r32', team1: 'AUS', team2: 'EGY', score1: 1, score2: 1, pen1: 2, pen2: 4 },
 
   // Round of 16
-  { round: 'r16', team1: 'CAN', team2: 'MAR', score1: 0, score2: 3 },
   { round: 'r16', team1: 'PAR', team2: 'FRA', score1: 0, score2: 1 },
+  { round: 'r16', team1: 'CAN', team2: 'MAR', score1: 0, score2: 3 },
   { round: 'r16', team1: 'BRA', team2: 'NOR', score1: 1, score2: 2 },
   { round: 'r16', team1: 'MEX', team2: 'ENG', score1: 2, score2: 3 },
   { round: 'r16', team1: 'POR', team2: 'ESP', score1: 0, score2: 1 },
+  { round: 'r16', team1: 'USA', team2: 'BEL', score1: 1, score2: 4 },
+  { round: 'r16', team1: 'ARG', team2: 'EGY', score1: 3, score2: 2 },
+  { round: 'r16', team1: 'SUI', team2: 'COL', score1: 0, score2: 0, pen1: 4, pen2: 3 },
+
+  // Quarterfinals
+  { round: 'qf', team1: 'FRA', team2: 'MAR', score1: 2, score2: 0 },
+  { round: 'qf', team1: 'ESP', team2: 'BEL', score1: 2, score2: 1 },
+  { round: 'qf', team1: 'NOR', team2: 'ENG', score1: 1, score2: 2 },
+  { round: 'qf', team1: 'ARG', team2: 'SUI', score1: 3, score2: 1 },
+
+  // Semifinals
+  { round: 'sf', team1: 'FRA', team2: 'ESP', score1: 0, score2: 2 },
+  { round: 'sf', team1: 'ENG', team2: 'ARG', score1: 1, score2: 2 },
+
+  // Final
+  { round: 'final', team1: 'ESP', team2: 'ARG', score1: 1, score2: 0 },
 ];
 
 // Upcoming matches shown in the live tournament dashboard.
 // Use local Mountain Time in the time field for your family.
-window.UPCOMING_MATCHES = [
-  { round: 'r16', team1: 'USA', team2: 'BEL', date: '2026-07-06', dateLabel: '6 de julio', dateShort: 'Jul 6', time: '6:00 PM MDT', venue: '—' },
-  { round: 'r16', team1: 'ARG', team2: 'EGY', date: '2026-07-07', dateLabel: '7 de julio', dateShort: 'Jul 7', time: '10:00 AM MDT', venue: '—' },
-  { round: 'r16', team1: 'SUI', team2: 'COL', date: '2026-07-07', dateLabel: '7 de julio', dateShort: 'Jul 7', time: '2:00 PM MDT', venue: '—' },
-];
+window.UPCOMING_MATCHES = [];
+
+// Third-place playoff (not yet rendered by the current bracket engine).
+window.THIRD_PLACE_RESULT = { team1: 'FRA', team2: 'ENG', score1: 4, score2: 6 };
